@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JQ-Part 3</title>
+  <title>JQ-Part 3 – About Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- jQuery Mobile and jQuery -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #2196f3;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #333;
+    }
+
+    .ui-footer h4 {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .fade-box {
+      display: none;
+      margin: 20px;
+      padding: 15px;
+      background-color: #e3f2fd;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
+
+  <!-- Custom jQuery -->
+  <script>
+    $(document).on("pagecreate", "#about", function () {
+      $("<div class='fade-box'>This box fades in with jQuery!</div>")
+        .appendTo("[data-role='content']")
+        .fadeIn(2000);
+    });
+  </script>
 </head>
 <body>
 
@@ -14,15 +58,13 @@
       <h1>About</h1>
     </div>
 
-
     <div data-role="content">
       <h2>Welcome to the About page</h2>
+      <!-- jQuery will inject the fade-box here -->
     </div>
 
-   
     <div data-role="footer" data-position="fixed">
-      <div data-role="footer" data-position="fixed">
-      <h4>© Chloe – 10DIT23F2042 </h4>
+      <h4>© Chloe – 10DIT23F2042</h4>
     </div>
   </div>
 

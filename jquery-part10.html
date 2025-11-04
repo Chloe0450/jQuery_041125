@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact Us – Politeknik Seberang Perai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- jQuery CDN -->
+  <!-- jQuery and Font Awesome -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- External CSS -->
+  <!-- Your external CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +17,6 @@
   <div class="container">
     <h2>Contact Us with jQuery</h2>
 
-    <!-- Navigation Bar -->
     <nav>
       <button class="nav-button"><i class="fas fa-info-circle"></i> About Us</button>
       <button class="nav-button"><i class="fas fa-concierge-bell"></i> Our Services</button>
@@ -26,17 +24,14 @@
       <button class="nav-button"><i class="fas fa-envelope"></i> Contact Us</button>
     </nav>
 
-    <!-- Logo -->
     <img src="logo.png" alt="Politeknik Logo" class="logo">
 
-    <!-- Toggle Button for Contact Info -->
-    <button class="toggle-button">Show/Hide Contact Info</button>
+    <button class="toggle-button"><i class="fas fa-eye"></i> Show/Hide Contact Info</button>
 
-    <!-- Contact Info -->
     <div class="contact-info">
-      <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="#">Send a WhatsApp message</a></p>
-      <p><i class="fas fa-phone"></i> Call: [Your Contact No]</p>
-      <p><i class="fas fa-envelope"></i> Email: [Your Email Address]</p>
+      <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/60123456789" target="_blank">Send a WhatsApp message</a></p>
+      <p><i class="fas fa-phone"></i> Call: <a href="tel:+60123456789">+60 12-345 6789</a></p>
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@psp.edu.my">info@psp.edu.my</a></p>
       <p><i class="fas fa-map-marker-alt"></i> Address:<br>
         Politeknik Seberang Perai,<br>
         Jalan Permatang Pauh,<br>
@@ -45,33 +40,25 @@
       </p>
     </div>
 
-    <!-- Social Media Buttons -->
     <div class="social-buttons">
       <button class="social-button"><i class="fab fa-facebook"></i> Add Us on Facebook</button>
       <button class="social-button"><i class="fab fa-twitter"></i> Add Us on Twitter</button>
       <button class="social-button"><i class="fab fa-instagram"></i> Add Us on Instagram</button>
     </div>
+
+    <footer>
+      &copy; Chloe 041125 – jQuery Mobile Part 10
+    </footer>
   </div>
 
-  <!-- jQuery Interactions -->
   <script>
     $(document).ready(function() {
-      // Animate logo on load
       $(".logo").hide().fadeIn(2000);
 
-      // Hover effect on nav buttons
-      $(".nav-button").hover(function() {
-        $(this).css("background-color", "#2196f3").css("color", "white");
-      }, function() {
-        $(this).css("background-color", "white").css("color", "black");
-      });
-
-      // Click to show/hide contact info
       $(".toggle-button").click(function() {
         $(".contact-info").slideToggle();
       });
 
-      // Animate social icons on hover
       $(".social-button").hover(function() {
         $(this).fadeOut(100).fadeIn(100);
       });
